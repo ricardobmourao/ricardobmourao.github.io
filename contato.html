@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Blog Front-End </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="style/normalize.css">
+      <link rel="stylesheet" href="style/main.css">  
+        
+        
+        <script src="https://unpkg.com/vue"></script>
+        
+        
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js" 
+          type ="text/javascript"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+                });
+            });
+        
+         </script>
+
+        
+    </head>
+    <body class="no-js">
+        
+        <header class="header">
+          <a href="index.html" class="logo-text">Blog</a>
+          
+          <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="index.html">Posts</a></li>
+              <li><a class="scroll" href="#users">Administradores</a></li>
+              <li><a href="favoritos.html">Favoritos</a></li>    
+              <li><a class="scroll" href="#">Contato</a></li>    
+            </ul>
+    
+          </nav>
+        </header>
+        
+       
+
+        <section class="content">
+ 
+            
+        <div class="container" id="posts">
+            
+            <br>
+            <br>
+            <div>
+                <br>
+                <br>
+                <br>
+                <br>
+            
+                
+            </div>
+        
+            
+
+          <article>
+            <p> Estamos localizados na Rua Bernardo Guimarães, 245, Funcionários, Belo Horizonte -     Telefone: 32256773 </p>   <br> 
+            <p>Entre em contato com a equipe através do nosso e-mail <b>suporte@blog.com</b> ou preenchendo o formulário de contato.</p>  
+          </article>
+            
+                                     <div class="maps">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.8062577063565!2d-43.92907638446843!3d-19.93256754353797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699ea8708d30b%3A0x2176a7a9cb48d2d8!2sR.%20Bernardo%20Guimar%C3%A3es%2C%20245%20-%20Funcion%C3%A1rios%2C%20Belo%20Horizonte%20-%20MG%2C%2030140-080!5e0!3m2!1spt-BR!2sbr!4v1580506085974!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            
+          
+            
+            </div>
+
+
+            
+            
+        </section>
+        
+        <div>                 
+
+                    
+             <div class="container" id="comente">
+
+     
+                 
+             <div id="app">
+               
+                <h1>{{ titulo }}</h1>
+                <label for="">Nome</label><br>
+                <input type="text" v-model="nome">
+                
+                <br><br>
+                <label for="">Telefone</label><br>
+                <input type="text" v-model="telefone">
+                
+                <br><br>
+                <label for="">Deseja receber nossas Novidades?</label><br>
+                <input type="radio" value="Sim" v-model="novidades">Sim
+                <input type="radio" value="Não" v-model="novidades">Não
+              
+                <br><br>
+                <label for="">Interesses</label><br>
+                <input type="checkbox" value="HTML" v-model="interesses">HTML<br>
+                <input type="checkbox" value="CSS" v-model="interesses">CSS<br>
+                <input type="checkbox" value="JS" v-model="interesses">JS<br>
+                
+                
+                <br><br>
+                <label for="">Como nos Conheceu?</label><br>
+                <select v-model="conheceu">
+                    <option value="">Escolha</option>
+                    <option value="Google">Google</option>
+                    <option value="TV">TV</option>
+                    <option value="Revista">Revista</option>
+                </select>
+                
+                <br><br>
+                
+                <input class="field" type="submit" value="Enviar" class="button-default button-default-stroke button-default-big">
+                 
+                 <hr> 
+                 
+                 Nome: {{  nome }} <br>
+                 Telefone: {{ telefone }} <br>
+                 Novidades: {{ novidades }} <br>
+                 Interesses: {{ interesses }} <br>
+                 Como nos conheceu? {{ conheceu }} <br>
+                 
+            </div>     
+                 
+
+ 
+                 </div></div>
+        
+        
+        
+        
+        
+        <div class="container" id="users">
+            
+            
+            <br>
+            <br>
+            <div>
+            
+                
+            </div>
+            
+        <h1>Administradores</h1>    
+        
+        <section class="people-cards">
+            
+            
+          <article class="people-cards__card">               
+
+            <img src="img/c04.jpg" alt="Carousel Img" class="people-cards__image">
+            
+            <div class="people-cards__avatar">
+              <img src="img/teamsprite_04.png" alt="Carousel Img">
+            </div>
+            <div class="people-cards__content">
+                <h2 class="people-cards__title">Larry Kings</h2>
+                <h3 class="people-cards__title"><abbr title ="Wordpress">Kings</abbr></h3>
+              <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                
+            
+            </div>
+          </article> 
+            
+            
+             <article class="people-cards__card">               
+
+            <img src="img/c04.jpg" alt="Carousel Img" class="people-cards__image">
+            
+            <div class="people-cards__avatar">
+              <img src="img/teamsprite_04.png" alt="Carousel Img" class="people-cards__image">
+            </div>
+            <div class="people-cards__content">
+              <h2 class="people-cards__title">Ikea</h2>
+              <h3 class="people-cards__title"><abbr title ="Wordpress">Ik</abbr></h3>
+              <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            
+            </div>
+          </article> 
+            
+            
+             <article class="people-cards__card">               
+
+            <img src="img/c04.jpg" alt="Carousel Img" class="people-cards__image">
+            
+            <div class="people-cards__avatar">
+              <img src="img/teamsprite_04.png" alt="Carousel Img" class="people-cards__image">
+            </div>
+            <div class="people-cards__content">
+              <h2 class="people-cards__title">Mary</h2>
+              <h3 class="people-cards__title"><abbr title ="Wordpress">Ma</abbr></h3>
+              <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+              
+            </div>
+          </article> 
+            
+            
+             <article class="people-cards__card">               
+
+            <img src="img/c04.jpg" alt="Carousel Img" class="people-cards__image">
+            
+            <div class="people-cards__avatar">
+              <img src="img/teamsprite_04.png" alt="Carousel Img" class="people-cards__image">
+            </div>
+            <div class="people-cards__content">
+              <h2 class="people-cards__title">Patricia</h2>
+              <h3 class="people-cards__title"><abbr title ="Wordpress">Paty</abbr></h3>
+              <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+                
+            </div>
+          </article> 
+    
+        </section>
+            
+            </div>
+        
+        <br>
+        
+            
+            
+
+
+        <footer class="footer">
+            <div class="container">
+          <h2 class="footer__logo">BLOG</h2>
+        
+          <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+
+          <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+
+          <ul class="footer__links">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Work</a></li>
+          </ul>
+                
+            </div>    
+                
+        </footer>
+        
+        <script>
+        var app = new Vue({
+            el:"#app",
+            data: {
+                titulo: "Formulário",
+                nome: "",
+                telefone: "",
+                novidades: "",
+                interesses: [],
+                conheceu: ""
+            }
+        });
+        </script>
+        
+        <script src="js/menu.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/main.js"></script>
+        
+            
+    </body>
+</html>
